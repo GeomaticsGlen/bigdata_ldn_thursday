@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>dbt Labs – Executive Summary</title>
+  <style>
+    :root {
+      --bg: #0f111a;
+      --text: #e0e0e0;
+      --accent: #00b4ff;
+      --card: #1a1c2c;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 1em;
+    }
+    h1, h2 {
+      color: var(--accent);
+      margin-top: 1em;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .block {
+      background-color: var(--card);
+      border-left: 4px solid var(--accent);
+      padding: 1em;
+      margin: 1em 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    }
+    ul {
+      padding-left: 1.2em;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>📊 dbt Labs – Executive Summary</h1>
+  <p><strong>Last updated:</strong> September 2025<br>
+     <strong>Author:</strong> Stuart's GitHub Pages</p>
+
+  <h2>🏢 Who Is dbt Labs?</h2>
+  <p>dbt Labs (short for “data build tool”) is a Philadelphia-based software company founded in 2016 by Tristan Handy. Originally known as Fishtown Analytics, dbt Labs pioneered the concept of <strong>analytics engineering</strong>—a discipline that bridges the gap between data engineering and business analytics. Today, dbt Labs serves over 60,000 teams globally, including Siemens, Roche, JetBlue, and Condé Nast, and has raised over $220M in venture funding.</p>
+
+  <h2>🧠 What Is dbt?</h2>
+  <p>dbt is an open-source framework for transforming raw data into clean, analysis-ready datasets using SQL. It allows data teams to write modular, version-controlled transformation logic that runs directly inside cloud data warehouses like Snowflake, BigQuery, Redshift, and Databricks.</p>
+  <p>Unlike traditional ETL tools, dbt focuses solely on the “T”—transformation—within the ELT pipeline. It empowers data analysts to own the transformation layer without needing deep engineering skills.</p>
+
+  <h2>💡 Why Do People Use dbt?</h2>
+  <ul>
+    <li><strong>Modular SQL Development:</strong> Write reusable models using SQL and Jinja templating.</li>
+    <li><strong>Version Control:</strong> Git integration ensures traceability and collaboration.</li>
+    <li><strong>Automated Testing:</strong> Built-in data quality checks and schema validations.</li>
+    <li><strong>Documentation:</strong> Auto-generated lineage graphs and model descriptions.</li>
+    <li><strong>CI/CD Integration:</strong> Supports automated deployments and testing pipelines.</li>
+    <li><strong>Cloud-Native:</strong> Works seamlessly with modern data stacks and warehouses.</li>
+    <li><strong>Semantic Layer:</strong> dbt Cloud introduces a governed layer for metrics and definitions.</li>
+  </ul>
+
+  <h2>🔧 Fundamentals of the Technology</h2>
+  <p>At its core, dbt is a command-line tool (CLI) and a cloud platform (dbt Cloud) that compiles SQL models into executable queries. These models are organized into projects, which define dependencies, configurations, and documentation.</p>
+  <p>dbt uses a concept called <strong>ref()</strong> to manage dependencies between models, ensuring transformations run in the correct order. It also supports <strong>incremental models</strong> for efficient processing of large datasets, and <strong>macros</strong> for reusable logic.</p>
+  <p>dbt Cloud adds a visual interface, job scheduling, and collaboration tools, making it accessible to non-technical users while maintaining governance and scalability.</p>
+
+  <h2>🚀 Recent Innovations</h2>
+  <p>In 2025, dbt Labs launched the <strong>Fusion Engine</strong>, a Rust-based rewrite of dbt Core that delivers up to 30x faster performance, live error detection, and intelligent orchestration. The new VS Code extension and dbt Canvas interface further streamline development and onboarding.</p>
+
+  <h2>🌐 Strategic Impact</h2>
+  <p>dbt is now considered the control plane for data transformation. It enables organizations to:</p>
+  <ul>
+    <li>Deliver trusted, governed data for AI and analytics</li>
+    <li>Reduce cloud compute costs through efficient orchestration</li>
+    <li>Accelerate insight delivery by empowering analysts</li>
+    <li>Improve data quality and transparency across teams</li>
+  </ul>
+
+  <h2>📚 Curated Articles & Resources (Not Included in Word Count)</h2>
+  <ol>
+    <li><a href="https://www.getdbt.com/about-us" target="_blank">About dbt Labs – Company Overview</a></li>
+    <li><a href="https://www.forbes.com/companies/dbt-labs/" target="_blank">dbt Labs Profile – Forbes</a></li>
+    <li><a href="https://pitchbook.com/profiles/company/342181-72" target="_blank">dbt Labs Funding & Investors – PitchBook</a></li>
+    <li><a href="https://www.getdbt.com/blog/category/product-news" target="_blank">dbt Labs Product News & Updates</a></li>
+    <li><a href="https://www.prnewswire.co.uk/news-releases/dbt-labs-redefines-dbt-with-new-fusion-engine-built-to-revolutionize-developer-experience-in-the-age-of-ai-302466811.html" target="_blank">Fusion Engine Launch – PR Newswire</a></li>
+    <li><a href="https://businesstechawards.com/dbt-labs-redefining-enterprise-data-transformation-for-the-age-of-ai/" target="_blank">dbt Labs Shortlisted for SaaS Company of the Year</a></li>
+    <li><a href="https://www.datacamp.com/tutorial/what-is-dbt" target="_blank">What Is dbt? – DataCamp Tutorial</a></li>
+    <li><a href="https://www.geeksforgeeks.org/data-engineering/what-is-dbt/" target="_blank">dbt Fundamentals – GeeksforGeeks</a></li>
+    <li><a href="https://www.analytics8.com/blog/dbt-overview-what-is-dbt-and-what-can-it-do-for-my-data-pipeline/" target="_blank">dbt Overview – Analytics8</a></li>
+    <li><a href="https://www.getdbt.com/blog/implementing-common-data-transformation-techniques-dbt" target="_blank">Transformation Techniques with dbt – dbt Labs Blog</a></li>
+    <li><a href="https://www.getdbt.com/" target="_blank">dbt Labs Official Site</a></li>
+    <li><a href="https://www.getdbt.com/blog/dbt-cloud-vs-core/" target="_blank">dbt Cloud vs Core – Feature Comparison</a></li>
+    <li><a href="https://www.getdbt.com/blog/why-data-teams-love-dbt/" target="_blank">Why Data Teams Love dbt</a></li>
+    <li><a href="https://www.getdbt.com/blog/dbt-semantic-layer/" target="_blank">Introducing dbt Semantic Layer</a></li>
+    <li><a href="https://www.getdbt.com/blog/dbt-canvas-visual-editor/" target="_blank">dbt Canvas – Visual Editor</a></li>
+    <li><a href="https://www.getdbt.com/blog/dbt-vs-code-extension/" target="_blank">dbt VS Code Extension</a></li>
+    <li><a href="https://www.getdbt.com/blog/dbt-fusion-cost-savings/" target="_blank
