@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Azure Cost Estimate with OSDU Alternatives</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 1em;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    h2 {
+      color: #2c3e50;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1em;
+      background-color: #fff;
+    }
+    th, td {
+      padding: 0.75em;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+    th {
+      background-color: #eaeaea;
+    }
+    ul {
+      margin-top: 1em;
+      padding-left: 1.2em;
+    }
+    li {
+      margin-bottom: 0.5em;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>💰 Azure Cost Estimate with OSDU-Compatible Alternatives</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Resource Type</th>
+        <th>Azure Service</th>
+        <th>Est. Monthly Cost</th>
+        <th>Potential Alternatives for OSDU</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Storage Account</td>
+        <td>Azure Storage (Hot LRS)</td>
+        <td>£2–£5</td>
+        <td>❌ None — required</td>
+        <td>Used for blob storage and Terraform backend</td>
+      </tr>
+      <tr>
+        <td>Key Vault</td>
+        <td>Azure Key Vault Standard</td>
+        <td>£1–£3</td>
+        <td>❌ None — required</td>
+        <td>Stores secrets, keys, and certs</td>
+      </tr>
+      <tr>
+        <td>App Insights</td>
+        <td>Application Insights</td>
+        <td>£15–£30</td>
+        <td>Azure Monitor (basic logs)</td>
+        <td>Can reduce telemetry volume or use basic logging</td>
+      </tr>
+      <tr>
+        <td>Log Analytics Workspace</td>
+        <td>Azure Monitor Logs</td>
+        <td>£2–£10</td>
+        <td>Azure Storage logging</td>
+        <td>Store logs in blob storage instead</td>
+      </tr>
+      <tr>
+        <td>Cosmos DB Account</td>
+        <td>Azure Cosmos DB (Single Region)</td>
+        <td>£20–£100+</td>
+        <td>Azure Table Storage, PostgreSQL Flexible Server, MongoDB Atlas</td>
+        <td>Depends on schema, query needs, and OSDU data partitioning</td>
+      </tr>
+      <tr>
+        <td>App Service Plan</td>
+        <td>Standard S1 (1 instance)</td>
+        <td>£50–£60</td>
+        <td>Azure Container Apps, Azure Functions</td>
+        <td>Use serverless or containerized workloads</td>
+      </tr>
+      <tr>
+        <td>App Service</td>
+        <td>Azure Web App</td>
+        <td>Included</td>
+        <td>Azure Static Web Apps, Azure Functions</td>
+        <td>Depends on whether you need dynamic compute</td>
+      </tr>
+      <tr>
+        <td>Private DNS Zones</td>
+        <td>Azure DNS Private Zones</td>
+        <td>£0.40 per zone</td>
+        <td>❌ None — required</td>
+        <td>Needed for internal name resolution</td>
+      </tr>
+      <tr>
+        <td>Virtual Network + Subnets</td>
+        <td>Azure VNet</td>
+        <td>Free</td>
+        <td>❌ None — required</td>
+        <td>Core networking layer</td>
+      </tr>
+      <tr>
+        <td>Role Assignments / SPs</td>
+        <td>Azure AD</td>
+        <td>Free</td>
+        <td>❌ None — required</td>
+        <td>Identity and access control</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>🧠 Notes on Alternatives</h3>
+  <ul>
+    <li><strong>Cosmos DB:</strong> If you don’t need global distribution or multi-model APIs, <em>Azure Table Storage</em> is a cheap NoSQL alternative. For relational queries, <em>PostgreSQL Flexible Server</em> is OSDU-compatible and much cheaper.</li>
+    <li><strong>App Service Plan:</strong> If you’re just hosting APIs or microservices, <em>Azure Container Apps</em> or <em>Azure Functions</em> can cut costs dramatically.</li>
+    <li><strong>App Insights:</strong> You can reduce ingestion volume or switch to <em>basic Azure Monitor logs</em> to save money.</li>
+  </ul>
+
+</body>
+</html>
